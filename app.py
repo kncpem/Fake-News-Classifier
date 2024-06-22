@@ -14,13 +14,11 @@ nltk.download('stopwords')
 
 st.title('Fake News Classifier')
 
-# Define the icon URL (this example uses a Font Awesome icon)
-icon_url = "https://upload.wikimedia.org/wikipedia/commons/4/4a/News_Icon.png"
-
 # Create a string with HTML for the icon and the text
 custom_text2 = f"""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <p style="font-size:12px; color:grey;">
-    <img src="{icon_url}" alt="News Icon" style="width:16px; vertical-align:middle; margin-right:4px;">
+    <i class="fas fa-newspaper" style="margin-right:4px;"></i>
     by kncpem
 </p>
 """
