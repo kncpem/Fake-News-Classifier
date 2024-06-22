@@ -49,3 +49,4 @@ if st.button("Classify"):
             Confidence: {confidence if isinstance(confidence, str) else f'{confidence:.2f}%'}
         </div>
     """, unsafe_allow_html=True)
+    st.write("by kncpem")
