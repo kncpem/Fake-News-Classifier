@@ -49,4 +49,11 @@ if st.button("Classify"):
             Confidence: {confidence if isinstance(confidence, str) else f'{confidence:.2f}%'}
         </div>
     """, unsafe_allow_html=True)
-    write("by kncpem")
+
+# Create a string with HTML and CSS for the text
+custom_text = """
+<p style="font-size:12px; color:grey;">by kncpem</p>
+"""
+
+# Display the custom text using st.markdown
+st.markdown(custom_text, unsafe_allow_html=True)
