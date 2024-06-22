@@ -14,6 +14,20 @@ nltk.download('stopwords')
 
 st.title('Fake News Classifier')
 
+# Define the icon URL (this example uses a Font Awesome icon)
+icon_url = "https://upload.wikimedia.org/wikipedia/commons/4/4a/News_Icon.png"
+
+# Create a string with HTML for the icon and the text
+custom_text2 = f"""
+<p style="font-size:12px; color:grey;">
+    <img src="{icon_url}" alt="News Icon" style="width:16px; vertical-align:middle; margin-right:4px;">
+    by kncpem
+</p>
+"""
+
+# Display the custom text with the icon using st.markdown
+st.markdown(custom_text2, unsafe_allow_html=True)
+
 input_text = st.text_area("Enter the news text:")
 
 def preprocess_title(title):
