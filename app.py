@@ -40,6 +40,12 @@ if st.button("Classify"):
     except AttributeError:
         confidence = "N/A"
 
-    # Output using Streamlit
-    st.write(f"Prediction: {'Real News' if prediction[0] == 1 else 'Fake News'}")
-    st.write(f"Confidence: {confidence if isinstance(confidence, str) else f'{confidence:.2f}%'}")
+    # Output with better-decorated font
+    st.markdown(f"""
+        <div style="text-align: center; font-size: 24px; font-weight: bold; color: {'green' if prediction[0] == 1 else 'red'};">
+        Prediction: {'Real News' if prediction[0] == 1 else 'Fake News'}
+        </div>
+        <div style="text-align: center; font-size: 20px; margin-top: 10px;">
+            Confidence: {confidence if isinstance(confidence, str) else f'{confidence:.2f}%'}
+        </div>
+    """, unsafe_allow_html=True)
